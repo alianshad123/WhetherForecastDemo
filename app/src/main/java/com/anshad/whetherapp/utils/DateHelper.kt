@@ -40,7 +40,7 @@ object DateHelper {
 
     fun getDateOnly(s: Long): String? {
         try {
-            val sdf = SimpleDateFormat("dd-mm-yyyy",Locale.getDefault())
+            val sdf = SimpleDateFormat("dd-MM-yyyy",Locale.getDefault())
             val netDate = Date(s!!.toLong() * 1000)
             return sdf.format(netDate)
         } catch (e: Exception) {
