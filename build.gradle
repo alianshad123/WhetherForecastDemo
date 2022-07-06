@@ -27,6 +27,7 @@ plugins {
 
 ext{
     legacy_support = "1.0.0"
+    room_version = "2.4.2"
     material = "1.6.1"
     core_ktx = "1.8.0"
     lifecycle_version = "2.4.1"
@@ -45,9 +46,7 @@ ext{
     glide = "4.11.0"
     work_version = "2.7.0"
     hilt_work = "1.0.0"
-    play_services = "18.0.2"
-    play_services_map = "18.0.2"
-    firebase_messaging = "21.0.0"
+    play_services = "19.0.1"
     preference_version = "1.2.0"
     firebase_bom = "26.0.0"
     fragment_version = "1.2.5"

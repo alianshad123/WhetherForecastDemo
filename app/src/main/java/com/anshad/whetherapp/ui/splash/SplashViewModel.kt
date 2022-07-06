@@ -1,5 +1,6 @@
 package com.anshad.whetherapp.ui.splash
 
+import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.anshad.whetherapp.DemoViewmodel
@@ -13,6 +14,9 @@ import javax.inject.Inject
 class SplashViewModel @Inject constructor() : DemoViewmodel() {
 
     var liveData: MutableLiveData<SplashModel> = MutableLiveData()
+
+    var currentLatitude:Double?=0.0
+    var currentLongitude:Double?=0.0
     class SplashModel {
 
     }
@@ -31,8 +35,10 @@ class SplashViewModel @Inject constructor() : DemoViewmodel() {
     }
 
     fun navigateDashboard() {
-
-        navigate(R.id.action_splashFragment_to_dashboardFragment)
+        val bundle=Bundle()
+        bundle.putString("latitude",currentLatitude.toString())
+        bundle.putString("longitude",currentLongitude.toString())
+        navigate(R.id.action_splashFragment_to_dashboardFragment,bundle)
 
 
     }

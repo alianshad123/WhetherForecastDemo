@@ -12,4 +12,6 @@
     <string name="humidity">Humidity</string>
     <string name="max_temp">Max Temp</string>
     <string name="min_temp">Min Temp</string>
+    <string name="cancel_">Cancel</string>
+    <string name="wether_api">8391e04bcc77d63cbffa4f2d45041844</string>
 </resources>

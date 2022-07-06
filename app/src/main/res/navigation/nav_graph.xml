@@ -22,9 +22,12 @@
         android:name="com.anshad.whetherapp.ui.dashboard.DashboardFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_dashboard">
+       <!-- <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />-->
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/splashFragment" />
     </fragment>
 </navigation>

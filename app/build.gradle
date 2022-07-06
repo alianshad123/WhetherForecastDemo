@@ -109,4 +109,13 @@ dependencies {
     //legacy
     implementation "androidx.legacy:legacy-support-v4:$legacy_support"
 
+    // Room components
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    //Location service
+    implementation "com.google.android.gms:play-services-location:$play_services"
+
 }

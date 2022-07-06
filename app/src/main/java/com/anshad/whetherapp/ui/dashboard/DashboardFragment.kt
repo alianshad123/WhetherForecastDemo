@@ -39,6 +39,11 @@ class DashboardFragment : BaseFragment<DashboardViewModel>(R.layout.fragment_das
         binder.viewmodel = viewModel
         binder.adapter=adapter
 
+        viewModel.latitude= arguments?.getString("latitude") as String?
+        viewModel.longitude= arguments?.getString("longitude") as String?
+
+        viewModel.getData(viewModel.latitude,viewModel.longitude,viewModel.count,viewModel.apiKey)
+
         viewModel.weatherListData.observe(viewLifecycleOwner, Observer {
 
             if(it?.isNotEmpty() == true){

@@ -2,6 +2,7 @@ package com.anshad.whetherapp.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlin.math.roundToInt
 
 class Main {
     @SerializedName("temp")
@@ -31,4 +32,11 @@ class Main {
     @SerializedName("temp_kf")
     @Expose
     var temp_kf = 0.0
+
+    fun getDegreeCelcius( temp:Double):String?{
+       val degree=temp.minus(273.15)
+        val roundoff = (degree * 100.0).roundToInt() / 100.0
+
+        return "$roundoff °C"
+    }
 }

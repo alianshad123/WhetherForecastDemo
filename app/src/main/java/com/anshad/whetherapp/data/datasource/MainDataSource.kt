@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class MainDataSource @Inject constructor(private val apiService: ApiService
 ) : MainRepository {
-    override fun getData(): Observable<ForecastResponse> {
-        return apiService.getData().applyNetworkSchedulers()
+    override fun getData(latitude: String?, longitude: String?, count: String, apiKey: String): Observable<ForecastResponse> {
+        return apiService.getData(latitude,longitude,count,apiKey).applyNetworkSchedulers()
     }
 }

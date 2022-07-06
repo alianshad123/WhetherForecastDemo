@@ -4,5 +4,5 @@ import com.anshad.whetherapp.model.ForecastResponse
 import io.reactivex.rxjava3.core.Observable
 
 interface MainRepository {
-    fun getData(): Observable<ForecastResponse>
+    fun getData(latitude: String?, longitude: String?, count: String, apiKey: String): Observable<ForecastResponse>
 }
